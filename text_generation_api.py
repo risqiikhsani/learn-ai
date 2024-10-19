@@ -7,7 +7,10 @@ load_dotenv()  # take environment variables from .env.
 config = dotenv_values(".env.local")
 TOKEN = config["HUGGINGFACE_TOKEN"]
 print(TOKEN)
+
+
 API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-2b-it"
+# API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3.1-8B-Instruct"
 headers = {"Authorization": f"Bearer {TOKEN}"}
 
 def query(payload):
